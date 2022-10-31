@@ -1,9 +1,9 @@
 # https://hub.docker.com/r/dorowu/ubuntu-desktop-lxde-vnc/
 FROM dorowu/ubuntu-desktop-lxde-vnc:focal
 
-# for the local apt-cacher-ng proxy
-RUN echo 'Acquire::HTTP::Proxy "http://192.168.1.226:3142";' >> /etc/apt/apt.conf.d/01proxy && \
-    echo 'Acquire::HTTPS::Proxy "false";' >> /etc/apt/apt.conf.d/01proxy
+# for the local apt-cacher-ng proxy, local development only
+# RUN echo 'Acquire::HTTP::Proxy "http://192.168.1.226:3142";' >> /etc/apt/apt.conf.d/01proxy && \
+#     echo 'Acquire::HTTPS::Proxy "false";' >> /etc/apt/apt.conf.d/01proxy
 
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - && \
     apt update && \
