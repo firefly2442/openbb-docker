@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=OpenBB
+Type=Application
+Comment=OpenBB
+Categories=Application
+Exec=/run-openbb.sh
+Terminal=true
